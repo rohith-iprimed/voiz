@@ -1,1 +1,3 @@
 # voiz
+INSTALL BOOTSTRAP version 4.3
+INSTALL JQUERY 
