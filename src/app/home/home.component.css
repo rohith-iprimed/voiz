@@ -1,0 +1,11 @@
+.nav>li {
+    display: inline;
+    padding: 20px;
+    font-size: 13px;
+    color:whitesmoke;
+    background-color: red
+}
+
+.active {
+    font-size: 18px !important;
+}

@@ -1,0 +1,62 @@
+<div class="container-fluid" style="background-color:salmon;height:75px">
+        
+
+        <div class="row">
+              
+            <div class="col-md-2">
+                <img src="assets/images/voiz.jpeg" width="75" height="75">
+            </div>
+            <div class="col-md-2">
+                </div>
+            <div class="col-md-6">
+                <h1 style="font-weight: bolder;font-size: 60px">VOIZ FONICA</h1>
+                    </div>
+           
+
+        </div>
+    </div>
+
+<div class="container" style="padding:20px">
+
+
+<div class="row">
+      
+    <div class="col-md-8">
+
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-lg btn-danger"><a routerLink="/home">Home</a></button>
+            <button type="button" class="btn  btn-lg btn-danger"><a routerLink="/about">About us</a></button>
+            <button type="button" class="btn  btn-lg btn-danger"><a routerLink="/plan">Plans</a></button>
+            <button type="button" class="btn  btn-lg btn-danger"><a routerLink="/services">Support</a></button>
+          </div>
+    </div>
+ 
+    <div class="col-md-1">
+        <button class="btn  btn-danger" style="font-size: 10px" ><a routerLink="/signup">Sign up</a></button>
+    </div>
+    <div class="col-md-1">
+        <button class="btn  btn-danger" style="font-size: 10px" ><a routerLink="/login">Sign In</a></button>
+    </div>
+
+</div>
+</div>
+
+
+
+
+
+  <div *ngIf="menucheck()"><app-home></app-home></div>
+
+
+<!--<app-login></app-login><br>
+
+ <app-signup></app-signup><br>
+
+<app-info></app-info>
+<app-services></app-services>
+<app-success></app-success>
+<app-pay></app-pay>-->
+
+
+
+<router-outlet></router-outlet>

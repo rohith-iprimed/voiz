@@ -1,0 +1,35 @@
+<h2 style="text-align: center"> Sign In</h2>
+<form #f="ngForm" (ngSubmit)="onSubmitTemplateBased(f)"> 
+        <div class="imgcontainer">
+                <img src="assets/images/user.png"  height="200px" width="150px">
+              </div>
+            
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" class="form-control" placeholder="Enter Username" name="uname"  [(ngModel)]="uname" #email="ngModel" email required>
+                <div *ngIf="(f.submitted || (email.dirty || email.touched)) && email.invalid ">
+                <div *ngIf="email.errors?.required" class="error-block">
+                  Username is required!
+                </div>
+             
+                <div *ngIf="email.errors.email && !email.errors.required" class="error-block">
+                  Please enter valid username
+                </div>
+              </div>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" class="form-control" placeholder="Enter Password" name="psw" [(ngModel)]="psw"  required>
+                <div *ngIf="f.submitted && !psw.valid" class="error-block">Password is required!</div>
+              
+              
+                 <a class="btn btn-primary btn-block" (click)="onSubmitTemplateBased(f)">Login</a>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+            
+              <div class="container" style="background-color:#f1f1f1">
+              <a class="btn btn-primary btn-block" routerLink="/signup">Sign Up</a>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+
